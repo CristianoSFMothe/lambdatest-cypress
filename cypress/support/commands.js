@@ -1,5 +1,7 @@
-const element = require('../support/elements/homePage').homePage
+const element = require('../support/elements/specialOffersPage').specialOffersPage
 
-Cypress.Commands.add('homePage', (text) => {
-  cy.get(element.promotionalBanner).should('have.text', text)
+Cypress.Commands.add('message', (text) => {
+  cy.get(element.message)
+    .contains('p', text)
+    .should('be.visible')
 })
